@@ -1,4 +1,4 @@
 Rails.application.routes.draw do
-  root "home#index"
-  resources :shortens, only: [:create, :show]
+  root "shortens#new"
+  resources :shortens, only: [:new, :create, :show]
 end
