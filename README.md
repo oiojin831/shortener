@@ -1,4 +1,6 @@
 # Link Shortener
+[Link to the app](ls-shortener-staging.herokuapp.com)
+
 
 ## Todo
 - [x] Original URL -> short URL
