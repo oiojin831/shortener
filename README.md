@@ -1,5 +1,5 @@
 # Link Shortener
-[Link to the app](ls-shortener-staging.herokuapp.com)
+[Link to the app](http://ls-shortener-staging.herokuapp.com)
 
 
 ## Todo
