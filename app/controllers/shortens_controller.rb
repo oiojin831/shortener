@@ -17,6 +17,7 @@ class ShortensController < ApplicationController
   end
 
   def redirect
+    binding.pry
     @shorten = Shorten.find_by_id(url_id) or not_found
     redirect_to "#{@shorten.original_url}"
   end
