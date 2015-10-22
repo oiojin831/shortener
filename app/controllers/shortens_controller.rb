@@ -18,7 +18,7 @@ class ShortensController < ApplicationController
 
   def redirect
     @shorten = Shorten.find_by_id(url_id) or not_found
-    redirect_to "http://#{@shorten.original_url}"
+    redirect_to "#{@shorten.original_url}"
   end
 
   private

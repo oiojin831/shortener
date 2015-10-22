@@ -1,5 +1,6 @@
 class Shorten < ActiveRecord::Base
   after_create :generate_short_url
+  validates :original_url, :url => true
 
   private
 
