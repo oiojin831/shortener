@@ -5,6 +5,7 @@
   </tr>
   <tr>
     <td><%= @shorten.original_url %></td>
-    <td><%= link_to "#{request.base_url}/#{@shorten.short_url}", "#{request.base_url}/#{@shorten.short_url}" %></td>
+    <td><%= link_to "#{request.base_url}/#{@shorten.short_url}",
+                    "#{request.base_url}/#{@shorten.short_url}" %></td>
   </tr>
 </table>

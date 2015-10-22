@@ -17,7 +17,7 @@ class ShortensController < ApplicationController
   end
 
   def redirect
-    binding.pry
+    useful_info
     @shorten = Shorten.find_by_id(url_id) or not_found
     redirect_to "#{@shorten.original_url}"
   end
@@ -30,5 +30,9 @@ class ShortensController < ApplicationController
 
   def url_id
     Base62.decode(params[:short_url])
+  end
+
+  def useful_info
+    request.remote_ip
   end
 end
