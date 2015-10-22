@@ -249,6 +249,9 @@ GEM
     uglifier (2.7.2)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
+    validate_url (1.0.2)
+      activemodel (>= 3.0.0)
+      addressable
     web-console (2.2.1)
       activemodel (>= 4.0)
       binding_of_caller (>= 0.7.2)
@@ -307,6 +310,7 @@ DEPENDENCIES
   timecop
   title
   uglifier
+  validate_url
   web-console
   webmock
 
