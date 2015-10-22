@@ -13,7 +13,7 @@ class ShortensController < ApplicationController
   end
 
   def show
-    @shorten = Shorten.first
+    @shorten = Shorten.find(params[:id])
   end
 
   private
