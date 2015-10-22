@@ -16,6 +16,13 @@ class ShortensController < ApplicationController
     @shorten = Shorten.find(params[:id])
   end
 
+  def redirect
+    require "base62-rb"
+    url_id = Base62.decode(params[:short_url])
+    @shorten = Shorten.find(url_id)
+    redirect_to "http://#{@shorten.original_url}"
+  end
+
   private
 
   def shortens_params
