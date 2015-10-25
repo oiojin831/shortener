@@ -14,10 +14,17 @@
   - [ ] Get number of visited Short URL
 - [ ] Several ways to improve performance
   - [ ] Generate Short URL with Hash Table??
-  - [ ] Improve DB search with primary key
+  - [x] Improve DB search with primary key
   - [ ] Load balancing
   - [ ] Cache
     - [ ] Rails basic Cache
     - [ ] Redis
+  - [ ] RDBMS -> NoSql
+    - [ ] MongoDB
 - [ ] Analysis
   - [ ] ab
+
+
+## Roadmap
+
+Basic functions with RDBMS -> DB Caches -> response caches(page cache) -> NoSql -> Redis?
