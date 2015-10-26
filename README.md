@@ -12,6 +12,10 @@
   - [ ] Get IP
   - [ ] Get referer
   - [ ] Get number of visited Short URL
+  - [ ] Browser count
+  - [ ] IP count
+  - [ ] Countries count
+  - [ ] Platform count
 - [ ] Several ways to improve performance
   - [ ] Generate Short URL with Hash Table??
   - [x] Improve DB search with primary key
@@ -23,6 +27,7 @@
     - [ ] MongoDB
 - [ ] Analysis
   - [ ] ab
+  - [ ] New relic
 
 
 ## Roadmap
