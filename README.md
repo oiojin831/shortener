@@ -9,11 +9,11 @@
   - [x] Use Base62
 - [x] Click short URL -> redirect to Original URL
 - [ ] Get as many info as possible when visitor accesses to Short URL
-  - [ ] Get IP
+  - [x] Get IP
   - [ ] Get referer
   - [ ] Get number of visited Short URL
   - [ ] Browser count
-  - [ ] IP count
+  - [x] IP count
   - [ ] Countries count
   - [ ] Platform count
 - [ ] Several ways to improve performance

@@ -4,7 +4,7 @@ class ShortensController < ApplicationController
   end
 
   def create
-    @shorten = Shorten.create(shortens_params)
+    @shorten = Shorten.new(shortens_params)
     if @shorten.save
       redirect_to @shorten
     else
@@ -17,8 +17,16 @@ class ShortensController < ApplicationController
   end
 
   def redirect
-    useful_info
     @shorten = Shorten.find_by_id(url_id) or not_found
+    if Ip.find_by_addr(request.ip)
+      ip = Ip.find_by_addr(request.ip)
+      count = ip.num
+      count += 1
+      ip.update_attributes(num: count)
+      # update count
+    else
+      @shorten.ips.build(shorten_id: @shorten.id, addr: request.ip, num: 0)
+    end
     redirect_to "#{@shorten.original_url}"
   end
 
@@ -30,9 +38,5 @@ class ShortensController < ApplicationController
 
   def url_id
     Base62.decode(params[:short_url])
-  end
-
-  def useful_info
-    request.remote_ip
   end
 end

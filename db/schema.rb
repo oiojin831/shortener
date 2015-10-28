@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151022053152) do
+ActiveRecord::Schema.define(version: 20151028150949) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -32,6 +32,16 @@ ActiveRecord::Schema.define(version: 20151022053152) do
 
   add_index "delayed_jobs", ["priority", "run_at"], name: "delayed_jobs_priority", using: :btree
 
+  create_table "ips", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string   "addr"
+    t.integer  "num"
+    t.integer  "shorten_id"
+  end
+
+  add_index "ips", ["shorten_id"], name: "index_ips_on_shorten_id", using: :btree
+
   create_table "shortens", force: :cascade do |t|
     t.string   "original_url"
     t.datetime "created_at",   null: false
@@ -39,4 +49,5 @@ ActiveRecord::Schema.define(version: 20151022053152) do
     t.string   "short_url"
   end
 
+  add_foreign_key "ips", "shortens"
 end

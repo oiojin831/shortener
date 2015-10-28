@@ -27,6 +27,8 @@ gem "simple_form"
 gem "title"
 gem "uglifier"
 gem "validate_url"
+gem 'pry-remote'
+gem 'pry-nav'
 
 group :development do
   gem "spring"

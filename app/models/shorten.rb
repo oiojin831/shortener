@@ -1,4 +1,5 @@
 class Shorten < ActiveRecord::Base
+  has_many :ips
   after_create :generate_short_url
   validates :original_url, :url => true
 
